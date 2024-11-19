@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head> <!--simple information of the website-->
+			<title>Run Nezuko! RUN!</title>
+            <meta charset="UTF-8">
+            <meta name="description" content="Random coding project to test maze game">
+            <meta name="keywords" content="maze, coding, test">
+            <link rel="stylesheet" href="./level_1.css">
+	</head>
+	<body> 
+
+                <div class="pop_quiz" id="pop_quiz">
+                        <label>6 + 8 x 5 - 12 = ?</label>
+                        <input type="number" id="mathQ"/>
+                        <!--<input type="submit" onclick="checkAns()"/>-->
+                        <button id="enter" onclick="checkAns()">Submit</button>
+                </div>
+
+                <canvas width="1024" height="576"></canvas>
+                <script src="collisions.js"></script>
+                <script src="index.js"></script>
+                
+                <script>
+                        function checkAns(){
+                                let input = document.getElementById('mathQ');
+                                let ans = input.value;
+                                if (ans == 34){
+                                        window.location.href = "intro.html";
+                                } else {
+                                        window.location.href = "fail.html";
+                                }
+                        }
+                </script>
+
+	</body>
+</html>

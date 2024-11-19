@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> <!--simple information of the website-->
+			<title>Run Nezuko! RUN!</title>
+            <meta charset="UTF-8">
+            <meta name="description" content="Random coding project to test maze game">
+            <meta name="keywords" content="maze, coding, test">
+            <link rel="stylesheet" href="./style.css">
+	</head>
+	<body> 
+        
+        <div class="container">
+            <h1>Run Nezuko! RUN!</h1>
+            <p>GOAL: get through the maze without getting caught by the family member.</p>
+            <p>Pass 5 levels to win the game. Use w, s, a, d to move up, down, left, right. </p>
+
+            
+            <img src="./img/nezuko.png" alt="nezuko" width="330" height="267" id="nezuko">
+            <img src="./img/zenitsu.png" alt="zenitsu" width="350" height="350" id="zenitsu">
+            <img src="./img/inosuke.png" alt="inosuke" width="450" height="450" id="inosuke">
+            
+        </div>
+
+        <button class="button" id="No" onclick="tryAgain()">No, I'm confused</button>
+        <button class="button" id="Yes" onclick="beginGame()">Yes, Let's play</button>
+
+        <div class="popup" id="popup">
+            <h2>Read the instructions again :) </h2>
+            <button id="ok" onclick="closePopup()">OK</button>
+        </div>
+
+        <script>
+            let popup = document.getElementById('popup');
+            function beginGame(){
+                window.location.href = "level_1.html";
+            }
+            function tryAgain(){
+                popup.classList.add("open-popup");
+            }
+            function closePopup(){
+                popup.classList.remove("open-popup");
+            }
+        </script>
+	</body>
+</html>
